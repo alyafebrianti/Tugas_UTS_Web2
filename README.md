@@ -1,4 +1,37 @@
 # Tugas_UTS_Web2
+
+# Eksperimen Keamanan Web: SQL Injection (SQLi) Bypass Login
+
+Repositori ini berisi kode sumber dan dokumentasi eksperimen mengenai kerentanan **SQL Injection** pada sistem otentikasi sederhana. Eksperimen ini dilakukan untuk memenuhi tugas **UTS Pemrograman Web**.
+
+##  Deskripsi Eksperimen
+Eksperimen ini mensimulasikan bagaimana sebuah input yang tidak difilter dapat memanipulasi query database, memungkinkan penyerang untuk masuk ke sistem tanpa mengetahui kredensial yang valid.
+
+## Struktur Database
+Database yang digunakan bernama `auth_lab` dengan tabel `users` sebagai berikut:
+
+| id | username | password | role |
+| :--- | :--- | :--- | :--- |
+| 1 | administrator | rahasia_admin_123 | Superadmin |
+| 2 | alya_dev | password_biasa123 | User |
+
+##  Langkah-Langkah Eksperimen
+
+1. **Persiapan:** Menjalankan server lokal (XAMPP) dan menyiapkan database MySQL.
+2. **Uji Coba Normal:** Melakukan login menggunakan akun `alya_dev` untuk memastikan sistem berfungsi.
+3. **Serangan SQL Injection:** - Memasukkan payload pada kolom username: `' OR '1'='1' -- `
+   - Mengosongkan kolom password.
+4. **Hasil:** Sistem berhasil ditembus dan memberikan akses sebagai akun pertama dalam database (Superadmin).
+
+##  Analisis Teknikal
+Celah ini terjadi karena kode PHP menggunakan penggabungan string langsung (string concatenation) untuk membangun query SQL:
+
+```php
+$query = "SELECT id, username, role FROM users WHERE username = '$username' AND password = '$password' LIMIT 1";
+```
+
+
+
 ```php
 <?php
 /**
