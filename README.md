@@ -1,5 +1,11 @@
 # Tugas_UTS_Web2
 
+## Nama : Alya Febrianti
+## NIM : 312410692
+## Kelas : I241A
+## Mata Kuliah : Pemrograman Web 2
+## Dosen : Agung Nugroho, S.Kom., M.Kom.
+
 # Eksperimen Keamanan Web: SQL Injection (SQLi) Bypass Login
 
 Repositori ini berisi kode sumber dan dokumentasi eksperimen mengenai kerentanan **SQL Injection** pada sistem otentikasi sederhana. Eksperimen ini dilakukan untuk memenuhi tugas **UTS Pemrograman Web**.
