@@ -202,3 +202,7 @@ Melalui eksperimen ini, dapat disimpulkan bahwa Keamanan Bukan Opsional Celah SQ
 * Logika Penyerangan : Penyerang tidak perlu mengetahui data asli (seperti password) jika mereka bisa memanipulasi logika query database itu sendiri. 
 * Pentingnya Validasi: Penggunaan teknik string concatenation untuk query database harus ditinggalkan sepenuhnya demi keamanan data.  
 * Solusi Standar Industri: Penggunaan Prepared Statements atau Parameterized Queries adalah cara paling efektif dan wajib diterapkan oleh pengembang web untuk menutup celah SQL Injection secara total.
+
+## Bukti Plagiarisme Artikel
+<img width="1011" height="930" alt="Screenshot 2026-04-28 094700" src="https://github.com/user-attachments/assets/ac6db6dd-dd37-4906-9fbf-0f4d02e05d87" />
+
